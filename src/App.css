@@ -6,6 +6,14 @@
   height: 40vmin;
   pointer-events: none;
 }
+.header {
+  background-color: rgb(89, 176, 147);
+  font-family: "Sansita Swashed", cursive;
+  font-weight: 4rem;
+  line-height: 4rem;
+  padding: 2rem;
+  margin: 2rem 2rem  ;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
