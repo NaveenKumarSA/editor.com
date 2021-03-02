@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/3.6.2/fabric.min.js"></script>
+    <!-- This is the cdn for ck editor -->
+    <script src="//cdn.ckeditor.com/4.11.1/standard/ckeditor.js"></script>
+  </head>
+  <body>
+    <input type="text" id="" placeholder="Your Title" /><br />
+    <canvas id="canvas" class="bg-info" style="background-color: aqua"></canvas>
+    <button onclick="Addtext()">Add Text</button>
+    <script>
+      var canvas = new fabric.Canvas("canvas");
+      function Addtext() {
+        var text = new fabric.Textbox(" ", {
+          width: 450,
+          backgroundcolor: "white",
+        });
+        canvas.add(text);
+      }
+    </script>
+  </body>
+</html>

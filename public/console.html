@@ -1,0 +1,60 @@
+<!DOCTYPE hyml>
+<html>
+  <head>
+    <!-- FabricJS CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/3.6.2/fabric.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- This is the cdn for ck editor -->
+    <script src="//cdn.ckeditor.com/4.11.1/standard/ckeditor.js"></script>
+    <style>
+      body,
+      div {
+        text-align: center;
+      }
+      h1 {
+        color: rgb(48, 61, 240);
+      }
+      canvas {
+        border: 2px solid rgb(2, 204, 255);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>
+      <h1>Text Canvas</h1>
+
+      <canvas
+        id="canvas"
+        class="bg-light p-5 m-5 text-center justify-content-center"
+        width="600"
+        height="200"
+      >
+      </canvas>
+      <br />
+      <button class="bg-info p-5 m-5" onclick="addField()">Add Field</button>
+    </div>
+  </body>
+
+  <div id="page123"></div>
+  <script>
+    function addField() {
+      // Create a new instace of Canvas
+      var canvas = new fabric.Canvas("canvas");
+
+      // Create a new Textbox instance
+      var text = new fabric.Textbox("Type Here..", {
+        width: 500,
+        margin: 100,
+      });
+
+      // Render the Textbox on Canvas
+      canvas.add(text);
+      CKEDITOR.replace("canvas");
+    }
+  </script>
+  <script type="text/javascript">
+    CKEDITOR.inline("canvas");
+    CKEDITOR.replace("page123");
+  </script>
+</html>
